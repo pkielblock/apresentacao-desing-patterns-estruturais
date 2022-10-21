@@ -1,17 +1,5 @@
 Design Patterns Estruturais
 ==========================
-
-Resumindo
-> Padrões estruturais basicamente se preocupam com a composição de objetos
-ou em outras palavras como entidades usam umas às outras.
-Ou ainda outra explicação seria como elas ajudam a responder "Como construir
-um componente de software?".
-
-A Wikipedia diz
-> Em engenharia de software, design patterns estruturais são padrões que facilitam
-o design através da identificação de uma maneira simples de construir as relações entre as
-entidades.
-
  * [Adapter](#-adapter)
  * [Bridge](#-bridge)
  * [Composite](#-composite)
