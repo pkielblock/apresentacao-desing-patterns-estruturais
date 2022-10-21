@@ -545,7 +545,7 @@ $computer->turnOff(); // Bup bup buzzz! Haah! Zzzzz
 ---------
 
 Exemplo do mundo real
-> Você já tomou chá fresco de alguma barraca? Eles geralmente fazem mais que um copo que você solicitou e guardam o que restou para servir a outro cliente que também solicitar, assim economizam recursos, como por exemplo gás. Flyweight Patter é sobre isto: compartilhar.
+> Você já tomou chá fresco de alguma barraca? Eles geralmente fazem mais que um copo que você solicitou e guardam o que restou para servir a outro cliente que também solicitar, assim economizam recursos, como por exemplo gás. Flyweight Pattern é sobre isto: compartilhar.
 
 
 Resumindo
@@ -600,7 +600,7 @@ class TeaShop
     public function serve()
     {
         foreach ($this->orders as $table => $tea) {
-            echo "Serving tea to table# " . $table;
+            echo "Servindo chá para a mesa# " . $table;
         }
     }
 }
@@ -646,12 +646,12 @@ class LabDoor implements Door
 {
     public function open()
     {
-        echo "Opening lab door";
+        echo "Abrindo a porta";
     }
 
     public function close()
     {
-        echo "Closing the lab door";
+        echo "Fechando a porta";
     }
 }
 ```
@@ -671,7 +671,7 @@ class SecuredDoor implements Door
         if ($this->authenticate($password)) {
             $this->door->open();
         } else {
-            echo "Big no! It ain't possible.";
+            echo "Não é possivel";
         }
     }
 
@@ -689,14 +689,8 @@ class SecuredDoor implements Door
 E assim é como ele pode ser utilizado
 ```php
 $door = new SecuredDoor(new LabDoor());
-$door->open('invalid'); // Big no! It ain't possible.
+$door->open('invalid'); // Não é possivel
 
-$door->open('$ecr@t'); // Opening lab door
-$door->close(); // Closing lab door
+$door->open('$ecr@t'); // Abrindo a Porta
+$door->close(); // Fechando a porta
 ```
-
-Este repositório traduzido [daqui](https://github.com/kamranahmedse/design-patterns-for-humans)
-e você pode encontrar o autor original em kamranahmed.se@gmail.com ou [@kamranahmedse](http://twitter.com/kamranahmedse)
-
-## Licensa
-MIT © [Kamran Ahmed](http://kamranahmed.info)
