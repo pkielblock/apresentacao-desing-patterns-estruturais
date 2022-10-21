@@ -337,7 +337,7 @@ Wikipedia diz
 > Em programação orientada a objeto, o Decorator Pattern permite que se adicione comportamentos para um objeto, tanto de maneira estatica quanto dinâmica, sem afetar o comportamento de outros objetos da mesma classe. O Decorator Pattern é muito útil para ser aderente ao principio de responsabilidade única, uma vez que ele permite que funcionalidades sejam divididas entre classes que compartilhe uma única preocupação.
 
 **Exemplo programático**
-Vamos pegar um café como exemplo. Primeiro vamos temos um SimpleCoffee implementando a interface Coffee.
+Vamos pegar um café como exemplo. Primeiro temos um SimpleCoffee implementando a interface Coffee.
 
 ```php
 interface Coffee
@@ -359,7 +359,8 @@ class SimpleCoffee implements Coffee
     }
 }
 ```
-Vamos pegar o café como exemplo. Primero de tudo, nós temos um simples café implementando a interface café.
+
+Queremos tornar o código extensível para permitir opções para modificá-lo, se necessário. Vamos fazer alguns complementos (decorators)
 ```php
 class MilkCoffee implements Coffee
 {
